@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chúc mừng năm mới 2024</title>
+    <style>
+        body {
+            background-image: url('https://chus.vn/images/Blog/M%E1%BB%87nh%202024/A%CC%89nh%2001._na%CC%86m%20gia%CC%81p%20thi%CC%80n%2C%20na%CC%86m%202024%2C%20na%CC%86m%20con%20ro%CC%82%CC%80ng%2C%20na%CC%86m%20thi%CC%80n%2C%20year%20of%20the%20dragon%2C%202024_.jpg?1704782528485');
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: background-image 0.5s ease-in-out;
+        }
+        
+        .envelope-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        .envelope {
+            width: 150px;
+            height: 150px;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            animation: rotateEnvelope 3s infinite;
+        }
+        
+        .envelope img {
+            max-width: 50%;
+            max-height: 50%;
+        }
+        
+        .message {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeInMessage 1s ease-in-out;
+        }
+        
+        .message p {
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        
+        .message strong {
+            font-size: 48px;
+            color: #ffd700;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        @keyframes rotateEnvelope {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeInMessage {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body onresize="resizeBackground()">
+    <div class="envelope-container">
+        <div class="envelope" onclick="openMessage()">
+            <img src="https://cdn-icons-png.flaticon.com/512/297/297170.png" alt="Lá thư">
+        </div>
+    </div>
+    <div class="message" id="message">
+        <p><strong>Chúc mừng năm mới bạn yêu !</strong> Năm 2023 đã kết thức bước sang năm 2024 năm của con rồng chúc bạn yêu khỏe như rồng này, sự nghiệp đi cày bay như rồng này, thọ lâu như rồng này, nói chung là tất cả những điều tốt đẹp là chúc bạn hết. Chúc như vậy thôi chứ chả muốn sến súa, văn vẻ sợ nói sai gì bạn bắt bẻ tôi chết sợ lắm sợ lắm..Vậy nhá vậy nhá. 
+            Happy New Year, M y L o V e!</p>
+    </div>
+    <a href="https://example.com" style="display: block; text-align: center; margin-top: 20px;">Liên kết tới trang web</a>
+    <script>
+        function openMessage() {
+            var body = document.querySelector('body');
+            body.style.backgroundImage = "url('https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/421649437_391777433374362_3638634989876012310_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeEIpd7BnbW12Qi09P7xdmZm62IenMTFKyPrYh6cxMUrI9fqS6qT2shTRyWXo0QsjmBwumD_c_eX41VcnXcADpmZ&_nc_ohc=q5gzGV4NZSAAX88d4Zc&_nc_ht=scontent.fhan14-1.fna&oh=00_AfA7Sp66QxTgOaSW7tyBWUghZ505lWh-_HK2RO_I9so_cQ&oe=65CB7B5B')";
+            
+            var envelope = document.querySelector('.envelope');
+            var message = document.getElementById('message');
+            envelope.style.display = 'none';
+            message.style.display = 'block';
+        }
+
+        function resizeBackground() {
+            var body = document.querySelector('body');
+            var windowWidth = window.innerWidth;
+            var windowHeight = window.innerHeight;
+            var backgroundWidth = 20; // Chiều rộng của hình nền ban đầu
+            var backgroundHeight = 74; // Chiều cao của hình nền ban đầu
+            var widthRatio = windowWidth / backgroundWidth;
+            var heightRatio = windowHeight / backgroundHeight;
+            var ratio = Math.max(widthRatio, heightRatio);
+            var newWidth = backgroundWidth * ratio;
+            var newHeight = backgroundHeight * ratio;
+            body.style.backgroundSize = newWidth + 'px ' + newHeight + 'px';
+            
+        }
+    </script>
+</body>
+</html>
